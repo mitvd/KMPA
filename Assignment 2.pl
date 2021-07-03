@@ -27,10 +27,15 @@ coffee(espresso) :-
  map(milk, "2", regular).
  map(milk, "3", foam).
  map(milk, "0", _).
- 
+  
+ map(question, "1", qstrenght).
+ map(question, "2", qmilk).
+ map(question, "0", _).
+
  % Declare dynamic predicates for user input
  :- dynamic strength/1.
  :- dynamic milk/1.
+ :- dynamic question/1.
  
  % Empty the user input at startup
  clear :-
@@ -38,6 +43,8 @@ coffee(espresso) :-
     asserta(milk(_)),
     retractall(strength(_)),
     asserta(strength(_)).
+    retractall(question(_)),
+    asserta(question(_)).
  :-clear.
  
  %%%%%%%%%%%%%%%%%%%%
@@ -79,20 +86,39 @@ coffee(espresso) :-
  
  % Gather information from the user
  process_choice("2") :-
-    ask_question,
-    !.
- 
+    write('\e[2J'),
+    writeln("Current suggestion:"),
+    choose_question.
+
  % Gather information from the user
  process_choice("3") :-
-    format("~nThe process wil bee restarted.~n~n"),
+    write('\e[2J'),
+    format("~nThe process will be restarted.~n~n"),
     format("All previous preferences are deleted.~n"),
     clear,
     !.
  
  
  % Questions are layed out in fixed order
+ choose_question :-
+    var(Q),
+    write('\e[2J'),
+    nl,
+    format('~46t~72|~n'),
+    writeln("What information do you like to provide?"),
+    writeln("1. Strength"),
+    writeln("2. Milk"),
+    writeln("0. Never mind"),
+    format('~46t~72|~n'),
+    read_line_to_string(user_input, Choice),
+    map(question, Choice, Q),
+    retractall(question(_)),
+    assertz(question(Q)),
+    nonvar(Q),
+    Q.
+
  % First ask about the strength and then about the milk
- ask_question :-
+ qstrenght :-
     strength(S),
     var(S),
     write('\e[2J'),
@@ -108,7 +134,7 @@ coffee(espresso) :-
     retractall(strength(_)),
     assertz(strength(S)).
  
- ask_question :-
+ qmilk :-
     milk(M),
     var(M),
     write('\e[2J'),
