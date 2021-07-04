@@ -120,6 +120,15 @@
  :- dynamic disability_criterion/1.
  :- dynamic question/1.
  :- dynamic temp_coverage/1.
+ :- dynamic temp_insurance_type/1.
+ :- dynamic temp_insured_amounts/1.
+ :- dynamic temp_ending_age/1.
+ :- dynamic temp_rate_type/1.
+ :- dynamic temp_contract_duration/1.
+ :- dynamic temp_waiting_time/1.
+ :- dynamic temp_indexing_options/1.
+ :- dynamic temp_disability_tresholds/1.
+ :- dynamic temp_disability_criterion/1.
  
  % Empty the user input at startup
  clear :-
@@ -146,7 +155,25 @@
     retractall(question(_)),
     asserta(question(_)),
     retractall(temp_coverage(_)),
-    asserta(temp_coverage(_)).
+    asserta(temp_coverage(_)),
+    retractall(temp_insurance_type(_)),
+    asserta(temp_insurance_type(_)),
+    retractall(temp_insured_amounts(_)),
+    asserta(temp_insured_amounts(_)),
+    retractall(temp_ending_age(_)),
+    asserta(temp_ending_age(_)),
+    retractall(temp_rate_type(_)),
+    asserta(temp_rate_type(_)),
+    retractall(temp_contract_duration(_)),
+    asserta(temp_contract_duration(_)),
+    retractall(temp_waiting_time(_)),
+    asserta(temp_waiting_time(_)),
+    retractall(temp_indexing_options(_)),
+    asserta(temp_indexing_options(_)),
+    retractall(temp_disability_tresholds(_)),
+    asserta(temp_disability_tresholds(_)),
+    retractall(temp_disability_criterion(_)),
+    asserta(temp_disability_criterion(_)).
  :-clear.
  
  %%%%%%%%%%%%%%%%%%%%
@@ -176,7 +203,7 @@
  
  
  process_choice("0") :-   % user choice is 0: succeed.
-    format("Thank you and see you next time!~n~n~n"), clear.
+    format("Thank you and see you next time!~n~n~n").
  
  % Run inference
  process_choice("1") :-
@@ -184,7 +211,7 @@
     nl,
     writeln("Current suggestion:"),
     find_suggestions(Insurance),
-    format("I personally recommend insurance ~w ", Insurance).
+    format("I personally recommend insurance ~w ~n ~n", Insurance).
  
  % Gather information from the user
  process_choice("2") :-
@@ -196,8 +223,7 @@
     write('\e[2J'),
     format("~nThe process will be restarted.~n~n"),
     format("All previous preferences are deleted.~n"),
-    clear,
-    !.
+    clear, !.
  
  % Questions are layed out in fixed order
  choose_question :-
@@ -410,16 +436,34 @@
     formC(C),
     temp_coverage(UpC),
     insurance_type(IT),
+    formIT(IT),
+    temp_insurance_type(UpIT),
     insured_amounts(IA),
+    formIA(IA),
+    temp_insured_amounts(UpIA),
     ending_age(EA),
+    formEA(EA),
+    temp_ending_age(UpEA),
     rate_type(RT),
+    formRT(RT),
+    temp_rate_type(UpRT),
     contract_duration(CD),
+    formCD(CD),
+    temp_contract_duration(UpCD),
     waiting_time(WT),
+    formWT(WT),
+    temp_waiting_time(UpWT),
     indexing_options(IO),
+    formIO(IO),
+    temp_indexing_options(UpIO),
     disability_tresholds(DT),
+    formDT(DT),
+    temp_disability_tresholds(UpDT),
     disability_criterion(DC),
+    formDC(DC),
+    temp_disability_criterion(UpDC),
 
-    format_preferences(UpC, IT, IA, EA, RT, CD, WT, IO, DT, DC).
+    format_preferences(UpC, UpIT, UpIA, UpEA, UpRT, UpCD, UpWT, UpIO, UpDT, UpDC), !.
  
  formC(C):-
     temp_coverage(UpC),
@@ -432,42 +476,131 @@
     UpC = '-',
     retractall(temp_coverage(_)),
     assertz(temp_coverage(UpC)).
+ 
+ formIT(IT):-
+    temp_insurance_type(UpIT),
+    nonvar(IT), 
+    retractall(temp_insurance_type(_)),
+    assertz(temp_insurance_type(IT)).
+
+ formIT(_):-
+    temp_insurance_type(UpIT),
+    UpIT = '-',
+    retractall(temp_insurance_type(_)),
+    assertz(temp_insurance_type(UpIT)).
+ 
+ formIA(IA):-
+    temp_insured_amounts(UpIA),
+    nonvar(IA), 
+    retractall(temp_insured_amounts(_)),
+    assertz(temp_insured_amounts(IA)).
+
+ formIA(_):-
+    temp_insured_amounts(UpIA),
+    UpIA = '-',
+    retractall(temp_insured_amounts(_)),
+    assertz(temp_insured_amounts(UpIA)).
+ 
+ formEA(EA):-
+    temp_ending_age(UpEA),
+    nonvar(EA), 
+    retractall(temp_ending_age(_)),
+    assertz(temp_ending_age(EA)).
+
+ formEA(_):-
+    temp_ending_age(UpEA),
+    UpEA = '-',
+    retractall(temp_ending_age(_)),
+    assertz(temp_ending_age(UpEA)).
+ 
+ formRT(RT):-
+    temp_rate_type(UpRT),
+    nonvar(RT), 
+    retractall(temp_rate_type(_)),
+    assertz(temp_rate_type(RT)).
+
+ formRT(_):-
+    temp_rate_type(UpRT),
+    UpRT = '-',
+    retractall(temp_rate_type(_)),
+    assertz(temp_rate_type(UpRT)).
+ 
+ formCD(CD):-
+    temp_contract_duration(UpCD),
+    nonvar(CD), 
+    retractall(temp_contract_duration(_)),
+    assertz(temp_contract_duration(CD)).
+
+ formCD(_):-
+    temp_contract_duration(UpCD),
+    UpCD = '-',
+    retractall(temp_contract_duration(_)),
+    assertz(temp_contract_duration(UpCD)).
+ 
+ formWT(WT):-
+    temp_waiting_time(UpWT),
+    nonvar(WT), 
+    retractall(temp_waiting_time(_)),
+    assertz(temp_waiting_time(WT)).
+
+ formWT(_):-
+    temp_waiting_time(UpWT),
+    UpWT = '-',
+    retractall(temp_waiting_time(_)),
+    assertz(temp_waiting_time(UpWT)).
+ 
+ formIO(IO):-
+    temp_indexing_options(UpIO),
+    nonvar(IO), 
+    retractall(temp_indexing_options(_)),
+    assertz(temp_indexing_options(IO)).
+
+ formIO(_):-
+    temp_indexing_options(UpIO),
+    UpIO = '-',
+    retractall(temp_indexing_options(_)),
+    assertz(temp_indexing_options(UpIO)).
+ 
+ formDT(DT):-
+    temp_disability_tresholds(UpDT),
+    nonvar(DT), 
+    retractall(temp_disability_tresholds(_)),
+    assertz(temp_disability_tresholds(DT)).
+
+ formDT(_):-
+    temp_disability_tresholds(UpDT),
+    UpDT = '-',
+    retractall(temp_disability_tresholds(_)),
+    assertz(temp_disability_tresholds(UpDT)).
+ 
+ formDC(DC):-
+    temp_disability_criterion(UpDC),
+    nonvar(DC), 
+    retractall(temp_disability_criterion(_)),
+    assertz(temp_disability_criterion(DC)).
+
+ formDC(_):-
+    temp_disability_criterion(UpDC),
+    UpDC = '-',
+    retractall(temp_disability_criterion(_)),
+    assertz(temp_disability_criterion(UpDC)).
 
  % Formats the text according to the currently known preferences.
  %
- format_preferences(UpC, IT, IA, EA, RT, CD, WT, IO, DT, DC) :-
-    nonvar(IT), nonvar(IA), nonvar(EA), nonvar(RT), nonvar(CD),
-     nonvar(WT), nonvar(IO), nonvar(DT), nonvar(DC),
-    upcase_atom(IT, UpIT),
-    upcase_atom(IA, UpIA),
-    upcase_atom(EA, UpEA),
-    upcase_atom(RT, UpRT),
-    upcase_atom(CD, UpCD),
-    upcase_atom(WT, UpWT),
-    upcase_atom(IO, UpIO),
-    upcase_atom(DT, UpDT),
-    upcase_atom(DC, UpDC),
+ format_preferences(UpC, UpIT, UpIA, UpEA, UpRT, UpCD, UpWT, UpIO, UpDT, UpDC) :-
     format("Your current preferences are: ~n
-            Coverage: ~w ~n
-            Insurance type: ~w ~n
-            Insured amounts: ~w ~n
-            Ending age: ~w ~n
-            Rate type: ~w ~n
-            Contract duration: ~w ~n
-            Waiting time: ~w ~n
-            Indexing options: ~w ~n
-            Disability tresholds: ~w ~n
-            Disability criterion: ~w ~n
-            ~n",
-              [UpC, UpIT, UpIA, UpEA, UpRT, UpCD, UpWT, UpIO, UpDT, UpDC]), !.
-
- format_preferences(UpC, _, _, _, _, _, _, _, _, _) :-
-    format("Your current preferences are: ~n
-            Coverage: ~w ~n
-            ~n",
-              [UpC]), !.
-
- format_preferences(_, _, _, _, _, _, _, _, _, _).
+         Coverage: ~w ~n
+         Insurance type: ~w ~n
+         Insured amounts: ~w ~n
+         Ending age: ~w ~n
+         Rate type: ~w ~n
+         Contract duration: ~w ~n
+         Waiting time: ~w ~n
+         Indexing options: ~w ~n
+         Disability tresholds: ~w ~n
+         Disability criterion: ~w ~n
+         ~n",
+           [UpC, UpIT, UpIA, UpEA, UpRT, UpCD, UpWT, UpIO, UpDT, UpDC]), !.
  
  draw_insurance :-
     writeln('          ,-"-.'),
