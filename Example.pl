@@ -42,7 +42,7 @@ coffee(espresso) :-
     retractall(milk(_)),
     asserta(milk(_)),
     retractall(strength(_)),
-    asserta(strength(_)).
+    asserta(strength(_)),
     retractall(question(_)),
     asserta(question(_)).
  :-clear.
