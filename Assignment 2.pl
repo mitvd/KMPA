@@ -270,7 +270,8 @@
     nl,
     writeln("Current suggestion:"),
     find_suggestions(Insurance),
-    format("I personally recommend the disability insurance from ~w. ~n ~n", Insurance).
+    format("I personally recommend the disability insurance from ~w. ~n", Insurance),
+    writeln("This is based on your current preferences.").
  
  % Gather information from the user
  process_choice("2") :-
