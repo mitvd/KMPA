@@ -239,10 +239,6 @@
  %% USER INTERFACE %%
  %%%%%%%%%%%%%%%%%%%%
  
- %% Note for Windows users: the predicate tty_clear (clear the screen) is not supported on Windows.
- %% Replace all occurrences of this predicate with write('\e[2J')
- %% The predicate occurs five times.
- 
  menu :-
     write('\e[2J'),
     draw_insurance,
@@ -285,7 +281,7 @@
     format("All previous preferences are deleted.~n"),
     clear, !.
  
- % Questions are layed out in fixed order
+ % Questions are layed out in fixed order, user can choose a question to answer
  choose_question :-
     var(Q),
     write('\e[2J'),
@@ -311,7 +307,6 @@
     nonvar(Q),
     Q.
 
- % First ask about the strength and then about the milk
  q_coverage :-
     coverage(C),
     var(C),
@@ -529,6 +524,8 @@
 
     format_preferences(UpC, UpIT, UpIA, UpEA, UpRT, UpCD, UpWT, UpIO, UpDT, UpDC), !.
  
+ % Looks at variables wether they contain a value or not and assigning - to empty variables 
+ %
  formC(C):-
     temp_coverage(_),
     nonvar(C), 
