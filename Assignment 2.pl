@@ -492,7 +492,7 @@
     fail.
  
  
- % Prints the current user's preference to the screen
+ % Prints the current users preference to the screen
  %
  print_preferences :-
     coverage(C),
@@ -666,13 +666,11 @@
            [UpC, UpIT, UpIA, UpEA, UpRT, UpCD, UpWT, UpIO, UpDT, UpDC]), !.
  
  draw_insurance :-
-    writeln('          ,-"-.'),
-    writeln('       _r-----i               _'),
-    writeln('       \\       |-.         ,###.'),
-    writeln('        |      | |      ,-------.'),
-    writeln('        |      | |    c|         |                         ,--.'),
-    writeln("        |      |'      |         |        _______________ C|  |"),
-    writeln("        (=====)         =========         \\_____________/  `=='"),
-    writeln("(HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH)").
+    writeln(' ________    __________    _________    ___     ___    ________       _______      __________     _______    ________ '),
+    writeln('|__    __|  |   ____   |  |   ______|  |   |   |   |  |    __   \\    /       \\    |   ____   |   /  _____\\  |   _____|'),
+    writeln('   |  |     |  |    |  |  |  |______   |   |   |   |  |   |__|  |   /   /_\\   \\   |  |    |  |  /   /       |  |____  '),
+    writeln('   |  |     |  |    |  |  |______   |  |   |   |   |  |       __/  |    ___    |  |  |    |  |  |   |       |   ____| '),
+    writeln(' __|  |__   |  |    |  |   ______|  |  |   \\___/   |  |   |\\   \\   |   |   |   |  |  |    |  |  \\   \\_____  |  |_____ '),
+    writeln('|________|  |__|    |__|  |_________|  \\___________/  |___| \\___\\  |___|   |___|  |__|    |__|   \\_______/  |________|').
  
  :- menu.
