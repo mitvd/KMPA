@@ -3,19 +3,19 @@
 %%%%%%%%%%%%%%%%%%%%
 
 % Expert rules
-coffee(espresso) :-
+coffee('espresso') :-
     strength(strong), milk(no).
  
- coffee(filter) :-
+ coffee('filter') :-
     strength(light), milk(no).
  
- coffee(cappuccino) :-
+ coffee('cappuccino') :-
     strength(light), milk(foam).
  
- coffee(macchiato) :-
+ coffee('macchiato') :-
     strength(strong), milk(foam).
  
- coffee(latte) :-
+ coffee('latte') :-
     strength(light), milk(regular).
  
  % Map options to properties
