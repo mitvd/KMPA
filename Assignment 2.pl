@@ -6,107 +6,107 @@
  insurance('Allied Insurance') :-
     coverage(accidental), insurance_type(sum), insured_amounts('65%'), 
       ending_age(60), rate_type(standard), contract_duration('1 year'), waiting_time('1 month'), 
-      indexing_options('insured amounts'), disability_tresholds('25%'), disability_criterion('occupational disability').
+      indexing_options('insured amounts'), disability_thresholds('25%'), disability_criterion('occupational disability').
  
  insurance('FlexiGlobal Insurance') :-
     coverage(partial), insurance_type(damage), insured_amounts('80%'), 
       ending_age(60), rate_type(standard), contract_duration('1 year'), waiting_time('1 month'), 
-      indexing_options('insured amounts'), disability_tresholds('25%'), disability_criterion('suitable work').
+      indexing_options('insured amounts'), disability_thresholds('25%'), disability_criterion('suitable work').
       
  insurance('Republica Finance') :-
     coverage(complete), insurance_type(damage), insured_amounts('65%'), 
       ending_age(65), rate_type(combination), contract_duration('1 year'), waiting_time('3 months'), 
-      indexing_options(payment), disability_tresholds('25%'), disability_criterion('usual work').
+      indexing_options(payment), disability_thresholds('25%'), disability_criterion('usual work').
       
  insurance('Fund Guard') :-
     coverage(accidental), insurance_type(damage), insured_amounts('80%'), 
       ending_age(55), rate_type(standard), contract_duration('1 year'), waiting_time('6 months'), 
-      indexing_options('insured amounts'), disability_tresholds('25%'), disability_criterion('occupational disability').
+      indexing_options('insured amounts'), disability_thresholds('25%'), disability_criterion('occupational disability').
       
  insurance('Sun Global Insurance') :-
     coverage(partial), insurance_type(sum), insured_amounts('65%'), 
       ending_age(55), rate_type(standard), contract_duration('1 year'), waiting_time('1 month'), 
-      indexing_options(payment), disability_tresholds('25%'), disability_criterion('usual work').
+      indexing_options(payment), disability_thresholds('25%'), disability_criterion('usual work').
       
  insurance('Mutual Fund') :-
     coverage(complete), insurance_type(sum), insured_amounts('80%'), 
       ending_age(60), rate_type(combination), contract_duration('1 year'), waiting_time('6 months'), 
-      indexing_options(payment), disability_tresholds('35%'), disability_criterion('suitable work').
+      indexing_options(payment), disability_thresholds('35%'), disability_criterion('suitable work').
       
  insurance('Insuritas') :-
     coverage(accidental), insurance_type(damage), insured_amounts('65%'), 
       ending_age(55), rate_type(combination), contract_duration('1 year'), waiting_time('1 month'), 
-      indexing_options('insured amounts'), disability_tresholds('35%'), disability_criterion('occupational disability').
+      indexing_options('insured amounts'), disability_thresholds('35%'), disability_criterion('occupational disability').
       
  insurance('Kapital Financial Services') :-
     coverage(partial), insurance_type(sum), insured_amounts('80%'), 
       ending_age(60), rate_type(combination), contract_duration('1 year'), waiting_time('3 months'), 
-      indexing_options('insured amounts'), disability_tresholds('35%'), disability_criterion('occupational disability').
+      indexing_options('insured amounts'), disability_thresholds('35%'), disability_criterion('occupational disability').
       
  insurance('Borderless Insurance') :-
     coverage(complete), insurance_type(damage), insured_amounts('65%'), 
       ending_age(65), rate_type(standard), contract_duration('1 year'), waiting_time('6 months'), 
-      indexing_options(payment), disability_tresholds('25%'), disability_criterion('usual work').
+      indexing_options(payment), disability_thresholds('25%'), disability_criterion('usual work').
 
  insurance('Security First') :-
     coverage(accidental), insurance_type(damage), insured_amounts('80%'), 
       ending_age(55), rate_type(standard), contract_duration('1 year'), waiting_time('1 month'), 
-      indexing_options(payment), disability_tresholds('25%'), disability_criterion('usual work').
+      indexing_options(payment), disability_thresholds('25%'), disability_criterion('usual work').
 
  insurance('LifeCrest') :-
     coverage(partial), insurance_type(sum), insured_amounts('65%'), 
       ending_age(60), rate_type(standard), contract_duration('1 year'), waiting_time('3 months'), 
-      indexing_options('insured amounts'), disability_tresholds('25%'), disability_criterion('usual work').
+      indexing_options('insured amounts'), disability_thresholds('25%'), disability_criterion('usual work').
 
  insurance('Banklio') :-
     coverage(complete), insurance_type(sum), insured_amounts('80%'), 
       ending_age(65), rate_type(combination), contract_duration('3 years'), waiting_time('3 months'), 
-      indexing_options(payment), disability_tresholds('35%'), disability_criterion('suitable work').
+      indexing_options(payment), disability_thresholds('35%'), disability_criterion('suitable work').
 
  insurance('Fedora Finance Co.') :-
     coverage(accidental), insurance_type(damage), insured_amounts('65%'), 
       ending_age(60), rate_type(standard), contract_duration('3 years'), waiting_time('6 months'), 
-      indexing_options(payment), disability_tresholds('25%'), disability_criterion('occupational disability').
+      indexing_options(payment), disability_thresholds('25%'), disability_criterion('occupational disability').
 
  insurance('Securitas Fund') :-
     coverage(partial), insurance_type(sum), insured_amounts('80%'), 
       ending_age(60), rate_type(combination), contract_duration('3 years'), waiting_time('1 month'), 
-      indexing_options('insured amounts'), disability_tresholds('35%'), disability_criterion('usual work').
+      indexing_options('insured amounts'), disability_thresholds('35%'), disability_criterion('usual work').
 
  insurance('Budgeter Consulting') :-
     coverage(complete), insurance_type(sum), insured_amounts('65%'), 
       ending_age(55), rate_type(combination), contract_duration('3 years'), waiting_time('6 months'), 
-      indexing_options('insured amounts'), disability_tresholds('35%'), disability_criterion('usual work').
+      indexing_options('insured amounts'), disability_thresholds('35%'), disability_criterion('usual work').
 
  insurance('Capital Index') :-
     coverage(accidental), insurance_type(sum), insured_amounts('80%'), 
       ending_age(55), rate_type(standard), contract_duration('3 years'), waiting_time('1 month'), 
-      indexing_options('insured amounts'), disability_tresholds('35%'), disability_criterion('suitable work').
+      indexing_options('insured amounts'), disability_thresholds('35%'), disability_criterion('suitable work').
 
  insurance('Horizon Insurance') :-
     coverage(partial), insurance_type(damage), insured_amounts('65%'), 
       ending_age(55), rate_type(combination), contract_duration('3 years'), waiting_time('6 months'), 
-      indexing_options(payment), disability_tresholds('25%'), disability_criterion('occupational disability').
+      indexing_options(payment), disability_thresholds('25%'), disability_criterion('occupational disability').
 
  insurance('Smartly Life Insurance') :-
     coverage(complete), insurance_type(damage), insured_amounts('80%'), 
       ending_age(60), rate_type(combination), contract_duration('3 years'), waiting_time('6 months'), 
-      indexing_options(payment), disability_tresholds('35%'), disability_criterion('usual work').
+      indexing_options(payment), disability_thresholds('35%'), disability_criterion('usual work').
 
  insurance('Paysurance') :-
     coverage(accidental), insurance_type(sum), insured_amounts('65%'), 
       ending_age(65), rate_type(standard), contract_duration('3 years'), waiting_time('3 months'), 
-      indexing_options('insured amounts'), disability_tresholds('25%'), disability_criterion('occupational disability').
+      indexing_options('insured amounts'), disability_thresholds('25%'), disability_criterion('occupational disability').
 
  insurance('Fundancial Finance Co.') :-
     coverage(partial), insurance_type(damage), insured_amounts('80%'), 
       ending_age(60), rate_type(standard), contract_duration('3 years'), waiting_time('1 month'), 
-      indexing_options(payment), disability_tresholds('25%'), disability_criterion('usual work').
+      indexing_options(payment), disability_thresholds('25%'), disability_criterion('usual work').
 
  insurance('Ivy Finance') :-
     coverage(complete), insurance_type(sum), insured_amounts('65%'), 
       ending_age(65), rate_type(combination), contract_duration('3 years'), waiting_time('3 months'), 
-      indexing_options('insured amounts'), disability_tresholds('25%'), disability_criterion('usual work').
+      indexing_options('insured amounts'), disability_thresholds('25%'), disability_criterion('usual work').
  
  % Map options to properties
  map(coverage, "1", accidental).
@@ -144,9 +144,9 @@
  map(indexing_options, "2", 'insured amounts').
  map(indexing_options, "0", _).
  
- map(disability_tresholds, "1", '25%').
- map(disability_tresholds, "2", '35%').
- map(disability_tresholds, "0", _).
+ map(disability_thresholds, "1", '25%').
+ map(disability_thresholds, "2", '35%').
+ map(disability_thresholds, "0", _).
  
  map(disability_criterion, "1", 'usual work').
  map(disability_criterion, "2", 'suitable work').
@@ -162,7 +162,7 @@
  map(question, "6", q_contract_duration).
  map(question, "7", q_waiting_time).
  map(question, "8", q_indexing_options).
- map(question, "9", q_disability_tresholds).
+ map(question, "9", q_disability_thresholds).
  map(question, "10", q_disability_criterion).
  map(question, "0", _).
 
@@ -175,7 +175,7 @@
  :- dynamic contract_duration/1.
  :- dynamic waiting_time/1.
  :- dynamic indexing_options/1.
- :- dynamic disability_tresholds/1.
+ :- dynamic disability_thresholds/1.
  :- dynamic disability_criterion/1.
  :- dynamic question/1.
  :- dynamic temp_coverage/1.
@@ -186,7 +186,7 @@
  :- dynamic temp_contract_duration/1.
  :- dynamic temp_waiting_time/1.
  :- dynamic temp_indexing_options/1.
- :- dynamic temp_disability_tresholds/1.
+ :- dynamic temp_disability_thresholds/1.
  :- dynamic temp_disability_criterion/1.
  
  % Empty the user input at startup
@@ -207,8 +207,8 @@
     asserta(waiting_time(_)),
     retractall(indexing_options(_)),
     asserta(indexing_options(_)),
-    retractall(disability_tresholds(_)),
-    asserta(disability_tresholds(_)),
+    retractall(disability_thresholds(_)),
+    asserta(disability_thresholds(_)),
     retractall(disability_criterion(_)),
     asserta(disability_criterion(_)),
     retractall(question(_)),
@@ -229,8 +229,8 @@
     asserta(temp_waiting_time(_)),
     retractall(temp_indexing_options(_)),
     asserta(temp_indexing_options(_)),
-    retractall(temp_disability_tresholds(_)),
-    asserta(temp_disability_tresholds(_)),
+    retractall(temp_disability_thresholds(_)),
+    asserta(temp_disability_thresholds(_)),
     retractall(temp_disability_criterion(_)),
     asserta(temp_disability_criterion(_)).
  :-clear.
@@ -296,7 +296,7 @@
     writeln("6. Contract duration"),
     writeln("7. Waiting time"),
     writeln("8. Indexing options"),
-    writeln("9. Disability tresholds"),
+    writeln("9. Disability thresholds"),
     writeln("10. Disability criterion"),
     writeln("0. Go back"),
     format('~46t~72|~n'),
@@ -438,21 +438,21 @@
     retractall(indexing_options(_)),
     assertz(indexing_options(IO)).
  
- q_disability_tresholds :-
-    disability_tresholds(DT),
+ q_disability_thresholds :-
+    disability_thresholds(DT),
     var(DT),
     write('\e[2J'),
     nl,
     format('~46t~72|~n'),
-    writeln("What would you like the disability treshold of the insurance to be?"),
+    writeln("What would you like the disability threshold of the insurance to be?"),
     writeln("1. 25% disabled"),
     writeln("2. 35% disabled"),
     writeln("0. Go back"),
     format('~46t~72|~n'),
     read_line_to_string(user_input, Choice),
-    map(disability_tresholds, Choice, DT),
-    retractall(disability_tresholds(_)),
-    assertz(disability_tresholds(DT)).
+    map(disability_thresholds, Choice, DT),
+    retractall(disability_thresholds(_)),
+    assertz(disability_thresholds(DT)).
  
  q_disability_criterion :-
     disability_criterion(DC),
@@ -515,9 +515,9 @@
     indexing_options(IO),
     formIO(IO),
     temp_indexing_options(UpIO),
-    disability_tresholds(DT),
+    disability_thresholds(DT),
     formDT(DT),
-    temp_disability_tresholds(UpDT),
+    temp_disability_thresholds(UpDT),
     disability_criterion(DC),
     formDC(DC),
     temp_disability_criterion(UpDC),
@@ -623,16 +623,16 @@
     assertz(temp_indexing_options(UpIO)).
  
  formDT(DT):-
-    temp_disability_tresholds(_),
+    temp_disability_thresholds(_),
     nonvar(DT), 
-    retractall(temp_disability_tresholds(_)),
-    assertz(temp_disability_tresholds(DT)).
+    retractall(temp_disability_thresholds(_)),
+    assertz(temp_disability_thresholds(DT)).
 
  formDT(_):-
-    temp_disability_tresholds(UpDT),
+    temp_disability_thresholds(UpDT),
     UpDT = '-',
-    retractall(temp_disability_tresholds(_)),
-    assertz(temp_disability_tresholds(UpDT)).
+    retractall(temp_disability_thresholds(_)),
+    assertz(temp_disability_thresholds(UpDT)).
  
  formDC(DC):-
     temp_disability_criterion(_),
@@ -658,7 +658,7 @@
          Contract duration: ~w ~n
          Waiting time: ~w ~n
          Indexing options: ~w ~n
-         Disability tresholds: ~w ~n
+         Disability thresholds: ~w ~n
          Disability criterion: ~w ~n
          ~n",
            [UpC, UpIT, UpIA, UpEA, UpRT, UpCD, UpWT, UpIO, UpDT, UpDC]), !.
