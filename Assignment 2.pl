@@ -3,95 +3,154 @@
 %%%%%%%%%%%%%%%%%%%%
 
 % Expert rules
- insurance(a) :-
-    coverage(a), insurance_type(a), insured_amounts(a), 
-      ending_age(a), rate_type(a), contract_duration(a), waiting_time(a), 
-      indexing_options(a), disability_tresholds(a), disability_criterion(a).
+ insurance('Allied Insurance') :-
+    coverage(accidental), insurance_type(sum), insured_amounts('65%'), 
+      ending_age(60), rate_type(standard), contract_duration('1 year'), waiting_time('1 month'), 
+      indexing_options('insured amounts'), disability_tresholds('25%'), disability_criterion('occupational disability').
  
- insurance(b) :-
-    coverage(a), insurance_type(a), insured_amounts(a), 
-      ending_age(a), rate_type(b), contract_duration(b), waiting_time(b), 
-      indexing_options(b), disability_tresholds(b), disability_criterion(b).
+ insurance('FlexiGlobal Insurance') :-
+    coverage(partial), insurance_type(damage), insured_amounts('80%'), 
+      ending_age(60), rate_type(standard), contract_duration('1 year'), waiting_time('1 month'), 
+      indexing_options('insured amounts'), disability_tresholds('25%'), disability_criterion('suitable work').
       
- insurance(c) :-
-    coverage(a), insurance_type(a), insured_amounts(a), 
-      ending_age(b), rate_type(b), contract_duration(b), waiting_time(b), 
-      indexing_options(b), disability_tresholds(b), disability_criterion(a).
+ insurance('Republica Finance') :-
+    coverage(complete), insurance_type(damage), insured_amounts('65%'), 
+      ending_age(65), rate_type(combination), contract_duration('1 year'), waiting_time('3 months'), 
+      indexing_options(payment), disability_tresholds('25%'), disability_criterion('usual work').
       
- insurance(d) :-
-    coverage(b), insurance_type(a), insured_amounts(b), 
-      ending_age(b), rate_type(b), contract_duration(a), waiting_time(b), 
-      indexing_options(a), disability_tresholds(b), disability_criterion(b).
+ insurance('Fund Guard') :-
+    coverage(accidental), insurance_type(damage), insured_amounts('80%'), 
+      ending_age(55), rate_type(standard), contract_duration('1 year'), waiting_time('6 months'), 
+      indexing_options('insured amounts'), disability_tresholds('25%'), disability_criterion('occupational disability').
       
- insurance(e) :-
-    coverage(a), insurance_type(b), insured_amounts(b), 
-      ending_age(b), rate_type(a), contract_duration(a), waiting_time(b), 
-      indexing_options(b), disability_tresholds(b), disability_criterion(a).
+ insurance('Sun Global Insurance') :-
+    coverage(partial), insurance_type(sum), insured_amounts('65%'), 
+      ending_age(55), rate_type(standard), contract_duration('1 year'), waiting_time('1 month'), 
+      indexing_options(payment), disability_tresholds('25%'), disability_criterion('usual work').
       
- insurance(f) :-
-    coverage(b), insurance_type(b), insured_amounts(b), 
-      ending_age(b), rate_type(a), contract_duration(a), waiting_time(a), 
-      indexing_options(a), disability_tresholds(b), disability_criterion(b).
+ insurance('Mutual Fund') :-
+    coverage(complete), insurance_type(sum), insured_amounts('80%'), 
+      ending_age(60), rate_type(combination), contract_duration('1 year'), waiting_time('6 months'), 
+      indexing_options(payment), disability_tresholds('35%'), disability_criterion('suitable work').
       
- insurance(g) :-
-    coverage(a), insurance_type(a), insured_amounts(b), 
-      ending_age(b), rate_type(a), contract_duration(a), waiting_time(b), 
-      indexing_options(b), disability_tresholds(a), disability_criterion(a).
+ insurance('Insuritas') :-
+    coverage(accidental), insurance_type(damage), insured_amounts('65%'), 
+      ending_age(55), rate_type(combination), contract_duration('1 year'), waiting_time('1 month'), 
+      indexing_options('insured amounts'), disability_tresholds('35%'), disability_criterion('occupational disability').
       
- insurance(h) :-
-    coverage(b), insurance_type(b), insured_amounts(a), 
-      ending_age(a), rate_type(a), contract_duration(a), waiting_time(b), 
-      indexing_options(b), disability_tresholds(a), disability_criterion(b).
+ insurance('Kapital Financial Services') :-
+    coverage(partial), insurance_type(sum), insured_amounts('80%'), 
+      ending_age(60), rate_type(combination), contract_duration('1 year'), waiting_time('3 months'), 
+      indexing_options('insured amounts'), disability_tresholds('35%'), disability_criterion('occupational disability').
       
- insurance(i) :-
-    coverage(b), insurance_type(b), insured_amounts(b), 
-      ending_age(a), rate_type(a), contract_duration(b), waiting_time(b), 
-      indexing_options(a), disability_tresholds(a), disability_criterion(a).
+ insurance('Borderless Insurance') :-
+    coverage(complete), insurance_type(damage), insured_amounts('65%'), 
+      ending_age(65), rate_type(standard), contract_duration('1 year'), waiting_time('6 months'), 
+      indexing_options(payment), disability_tresholds('25%'), disability_criterion('usual work').
 
- insurance(j) :-
-    coverage(b), insurance_type(b), insured_amounts(a), 
-      ending_age(a), rate_type(b), contract_duration(b), waiting_time(a), 
-      indexing_options(a), disability_tresholds(a), disability_criterion(b).
+ insurance('Security First') :-
+    coverage(accidental), insurance_type(damage), insured_amounts('80%'), 
+      ending_age(55), rate_type(standard), contract_duration('1 year'), waiting_time('1 month'), 
+      indexing_options(payment), disability_tresholds('25%'), disability_criterion('usual work').
+
+ insurance('LifeCrest') :-
+    coverage(partial), insurance_type(sum), insured_amounts('65%'), 
+      ending_age(60), rate_type(standard), contract_duration('1 year'), waiting_time('3 months'), 
+      indexing_options('insured amounts'), disability_tresholds('25%'), disability_criterion('usual work').
+
+ insurance('Banklio') :-
+    coverage(complete), insurance_type(sum), insured_amounts('80%'), 
+      ending_age(65), rate_type(combination), contract_duration('3 years'), waiting_time('3 months'), 
+      indexing_options(payment), disability_tresholds('35%'), disability_criterion('suitable work').
+
+ insurance('Fedora Finance Co.') :-
+    coverage(accidental), insurance_type(damage), insured_amounts('65%'), 
+      ending_age(60), rate_type(standard), contract_duration('3 years'), waiting_time('6 months'), 
+      indexing_options(payment), disability_tresholds('25%'), disability_criterion('occupational disability').
+
+ insurance('Securitas Fund') :-
+    coverage(partial), insurance_type(sum), insured_amounts('80%'), 
+      ending_age(60), rate_type(combination), contract_duration('3 years'), waiting_time('1 month'), 
+      indexing_options('insured amounts'), disability_tresholds('35%'), disability_criterion('usual work').
+
+ insurance('Budgeter Consulting') :-
+    coverage(complete), insurance_type(sum), insured_amounts('65%'), 
+      ending_age(55), rate_type(combination), contract_duration('3 years'), waiting_time('6 months'), 
+      indexing_options('insured amounts'), disability_tresholds('35%'), disability_criterion('usual work').
+
+ insurance('Capital Index') :-
+    coverage(accidental), insurance_type(sum), insured_amounts('80%'), 
+      ending_age(55), rate_type(standard), contract_duration('3 years'), waiting_time('1 month'), 
+      indexing_options('insured amounts'), disability_tresholds('35%'), disability_criterion('suitable work').
+
+ insurance('Horizon Insurance') :-
+    coverage(partial), insurance_type(damage), insured_amounts('65%'), 
+      ending_age(55), rate_type(combination), contract_duration('3 years'), waiting_time('6 months'), 
+      indexing_options(payment), disability_tresholds('25%'), disability_criterion('occupational disability').
+
+ insurance('Smartly Life Insurance') :-
+    coverage(complete), insurance_type(damage), insured_amounts('80%'), 
+      ending_age(60), rate_type(combination), contract_duration('3 years'), waiting_time('6 months'), 
+      indexing_options(payment), disability_tresholds('35%'), disability_criterion('usual work').
+
+ insurance('Paysurance') :-
+    coverage(accidental), insurance_type(sum), insured_amounts('65%'), 
+      ending_age(65), rate_type(standard), contract_duration('3 years'), waiting_time('3 months'), 
+      indexing_options('insured amounts'), disability_tresholds('25%'), disability_criterion('occupational disability').
+
+ insurance('Fundancial Finance Co.') :-
+    coverage(partial), insurance_type(damage), insured_amounts('80%'), 
+      ending_age(60), rate_type(standard), contract_duration('3 years'), waiting_time('1 month'), 
+      indexing_options(payment), disability_tresholds('25%'), disability_criterion('usual work').
+
+ insurance('Ivy Finance') :-
+    coverage(complete), insurance_type(sum), insured_amounts('65%'), 
+      ending_age(65), rate_type(combination), contract_duration('3 years'), waiting_time('3 months'), 
+      indexing_options('insured amounts'), disability_tresholds('25%'), disability_criterion('usual work').
  
  % Map options to properties
- map(coverage, "1", a).
- map(coverage, "2", b).
+ map(coverage, "1", accidental).
+ map(coverage, "2", partial).
+ map(coverage, "3", complete).
  map(coverage, "0", _).
  
- map(insurance_type, "1", a).
- map(insurance_type, "2", b).
+ map(insurance_type, "1", sum).
+ map(insurance_type, "2", damage).
  map(insurance_type, "0", _).
 
- map(insured_amounts, "1", a).
- map(insured_amounts, "2", b).
+ map(insured_amounts, "1", '65%').
+ map(insured_amounts, "2", '80%').
  map(insured_amounts, "0", _).
  
- map(ending_age, "1", a).
- map(ending_age, "2", b).
+ map(ending_age, "1", 55).
+ map(ending_age, "2", 60).
+ map(ending_age, "3", 65).
  map(ending_age, "0", _).
  
- map(rate_type, "1", a).
- map(rate_type, "2", b).
+ map(rate_type, "1", standard).
+ map(rate_type, "2", combination).
  map(rate_type, "0", _).
  
- map(contract_duration, "1", a).
- map(contract_duration, "2", b).
+ map(contract_duration, "1", '1 year').
+ map(contract_duration, "2", '3 years').
  map(contract_duration, "0", _).
  
- map(waiting_time, "1", a).
- map(waiting_time, "2", b).
+ map(waiting_time, "1", '1 month').
+ map(waiting_time, "2", '3 months').
+ map(waiting_time, "3", '6 months').
  map(waiting_time, "0", _).
  
- map(indexing_options, "1", a).
- map(indexing_options, "2", b).
+ map(indexing_options, "1", payment).
+ map(indexing_options, "2", 'insured amounts').
  map(indexing_options, "0", _).
  
- map(disability_tresholds, "1", a).
- map(disability_tresholds, "2", b).
+ map(disability_tresholds, "1", '25%').
+ map(disability_tresholds, "2", '35%').
  map(disability_tresholds, "0", _).
  
- map(disability_criterion, "1", a).
- map(disability_criterion, "2", b).
+ map(disability_criterion, "1", 'usual work').
+ map(disability_criterion, "2", 'suitable work').
+ map(disability_criterion, "3", 'occupational disability').
  map(disability_criterion, "0", _).
  
   
@@ -211,7 +270,7 @@
     nl,
     writeln("Current suggestion:"),
     find_suggestions(Insurance),
-    format("I personally recommend insurance ~w ~n ~n", Insurance).
+    format("I personally recommend the disability insurance from ~w. ~n ~n", Insurance).
  
  % Gather information from the user
  process_choice("2") :-
@@ -231,7 +290,7 @@
     write('\e[2J'),
     nl,
     format('~46t~72|~n'),
-    writeln("What information do you like to provide?"),
+    writeln("What information would you like to provide?"),
     writeln("1. Coverage"),
     writeln("2. Insurance type"),
     writeln("3. Insured amounts"),
@@ -242,7 +301,7 @@
     writeln("8. Indexing options"),
     writeln("9. Disability tresholds"),
     writeln("10. Disability criterion"),
-    writeln("0. Never mind"),
+    writeln("0. Go back"),
     format('~46t~72|~n'),
     read_line_to_string(user_input, Choice),
     map(question, Choice, Q),
@@ -258,10 +317,11 @@
     write('\e[2J'),
     nl,
     format('~46t~72|~n'),
-    writeln("How do you like your coffee?"),
-    writeln("1. Strong"),
-    writeln("2. Light"),
-    writeln("0. Never mind"),
+    writeln("What would you like the coverage level of the insurance to be?"),
+    writeln("1. Accidental"),
+    writeln("2. Partial"),
+    writeln("3. Complete"),
+    writeln("0. Go back"),
     format('~46t~72|~n'),
     read_line_to_string(user_input, Choice),
     map(coverage, Choice, C),
@@ -274,10 +334,10 @@
     write('\e[2J'),
     nl,
     format('~46t~72|~n'),
-    writeln("How do you like your coffee?"),
-    writeln("1. Strong"),
-    writeln("2. Light"),
-    writeln("0. Never mind"),
+    writeln("What type would you like the insurance to be?"),
+    writeln("1. Sum"),
+    writeln("2. Damage"),
+    writeln("0. Go back"),
     format('~46t~72|~n'),
     read_line_to_string(user_input, Choice),
     map(insurance_type, Choice, IT),
@@ -290,10 +350,10 @@
     write('\e[2J'),
     nl,
     format('~46t~72|~n'),
-    writeln("How do you like your coffee?"),
-    writeln("1. Strong"),
-    writeln("2. Light"),
-    writeln("0. Never mind"),
+    writeln("What percent of your income would you like the insured amounts to be?"),
+    writeln("1. 65%"),
+    writeln("2. 80%"),
+    writeln("0. Go back"),
     format('~46t~72|~n'),
     read_line_to_string(user_input, Choice),
     map(insured_amounts, Choice, IA),
@@ -306,10 +366,11 @@
     write('\e[2J'),
     nl,
     format('~46t~72|~n'),
-    writeln("How do you like your coffee?"),
-    writeln("1. Strong"),
-    writeln("2. Light"),
-    writeln("0. Never mind"),
+    writeln("What would you like the ending age of the insurance to be?"),
+    writeln("1. 55 years"),
+    writeln("2. 60 years"),
+    writeln("2. 65 years"),
+    writeln("0. Go back"),
     format('~46t~72|~n'),
     read_line_to_string(user_input, Choice),
     map(ending_age, Choice, EA),
@@ -322,10 +383,10 @@
     write('\e[2J'),
     nl,
     format('~46t~72|~n'),
-    writeln("How do you like your coffee?"),
-    writeln("1. Strong"),
-    writeln("2. Light"),
-    writeln("0. Never mind"),
+    writeln("What would you like the rate type of the insurance to be?"),
+    writeln("1. Standard"),
+    writeln("2. Combination"),
+    writeln("0. Bo back"),
     format('~46t~72|~n'),
     read_line_to_string(user_input, Choice),
     map(rate_type, Choice, RT),
@@ -338,10 +399,10 @@
     write('\e[2J'),
     nl,
     format('~46t~72|~n'),
-    writeln("How do you like your coffee?"),
-    writeln("1. Strong"),
-    writeln("2. Light"),
-    writeln("0. Never mind"),
+    writeln("What would you like the duration of the insurance contract to be?"),
+    writeln("1. 1 year"),
+    writeln("2. 3 years"),
+    writeln("0. Go back"),
     format('~46t~72|~n'),
     read_line_to_string(user_input, Choice),
     map(contract_duration, Choice, CD),
@@ -354,10 +415,11 @@
     write('\e[2J'),
     nl,
     format('~46t~72|~n'),
-    writeln("How do you like your coffee?"),
-    writeln("1. Strong"),
-    writeln("2. Light"),
-    writeln("0. Never mind"),
+    writeln("How long would you like to wait before the coverage comes into effect?"),
+    writeln("1. 1 month"),
+    writeln("2. 3 months"),
+    writeln("3. 6 months"),
+    writeln("0. Go back"),
     format('~46t~72|~n'),
     read_line_to_string(user_input, Choice),
     map(waiting_time, Choice, WT),
@@ -370,10 +432,10 @@
     write('\e[2J'),
     nl,
     format('~46t~72|~n'),
-    writeln("How do you like your coffee?"),
-    writeln("1. Strong"),
-    writeln("2. Light"),
-    writeln("0. Never mind"),
+    writeln("What would you like the indexing options of the insurance to be?"),
+    writeln("1. Payment"),
+    writeln("2. Insured amounts"),
+    writeln("0. Go back"),
     format('~46t~72|~n'),
     read_line_to_string(user_input, Choice),
     map(indexing_options, Choice, IO),
@@ -386,10 +448,10 @@
     write('\e[2J'),
     nl,
     format('~46t~72|~n'),
-    writeln("How do you like your coffee?"),
-    writeln("1. Strong"),
-    writeln("2. Light"),
-    writeln("0. Never mind"),
+    writeln("What would you like the disability treshold of the insurance to be?"),
+    writeln("1. 25% disabled"),
+    writeln("2. 35% disabled"),
+    writeln("0. Go back"),
     format('~46t~72|~n'),
     read_line_to_string(user_input, Choice),
     map(disability_tresholds, Choice, DT),
@@ -402,10 +464,11 @@
     write('\e[2J'),
     nl,
     format('~46t~72|~n'),
-    writeln("How do you like your coffee?"),
-    writeln("1. Strong"),
-    writeln("2. Light"),
-    writeln("0. Never mind"),
+    writeln("What would you like the disability criterion of the insurance to be?"),
+    writeln("1. Usual work"),
+    writeln("2. Suitable work"),
+    writeln("3. Occupational disability"),
+    writeln("0. Go back"),
     format('~46t~72|~n'),
     read_line_to_string(user_input, Choice),
     map(disability_criterion, Choice, DC),
@@ -466,7 +529,7 @@
     format_preferences(UpC, UpIT, UpIA, UpEA, UpRT, UpCD, UpWT, UpIO, UpDT, UpDC), !.
  
  formC(C):-
-    temp_coverage(UpC),
+    temp_coverage(_),
     nonvar(C), 
     retractall(temp_coverage(_)),
     assertz(temp_coverage(C)).
@@ -478,7 +541,7 @@
     assertz(temp_coverage(UpC)).
  
  formIT(IT):-
-    temp_insurance_type(UpIT),
+    temp_insurance_type(_),
     nonvar(IT), 
     retractall(temp_insurance_type(_)),
     assertz(temp_insurance_type(IT)).
@@ -490,7 +553,7 @@
     assertz(temp_insurance_type(UpIT)).
  
  formIA(IA):-
-    temp_insured_amounts(UpIA),
+    temp_insured_amounts(_),
     nonvar(IA), 
     retractall(temp_insured_amounts(_)),
     assertz(temp_insured_amounts(IA)).
@@ -502,7 +565,7 @@
     assertz(temp_insured_amounts(UpIA)).
  
  formEA(EA):-
-    temp_ending_age(UpEA),
+    temp_ending_age(_),
     nonvar(EA), 
     retractall(temp_ending_age(_)),
     assertz(temp_ending_age(EA)).
@@ -514,7 +577,7 @@
     assertz(temp_ending_age(UpEA)).
  
  formRT(RT):-
-    temp_rate_type(UpRT),
+    temp_rate_type(_),
     nonvar(RT), 
     retractall(temp_rate_type(_)),
     assertz(temp_rate_type(RT)).
@@ -526,7 +589,7 @@
     assertz(temp_rate_type(UpRT)).
  
  formCD(CD):-
-    temp_contract_duration(UpCD),
+    temp_contract_duration(_),
     nonvar(CD), 
     retractall(temp_contract_duration(_)),
     assertz(temp_contract_duration(CD)).
@@ -538,7 +601,7 @@
     assertz(temp_contract_duration(UpCD)).
  
  formWT(WT):-
-    temp_waiting_time(UpWT),
+    temp_waiting_time(_),
     nonvar(WT), 
     retractall(temp_waiting_time(_)),
     assertz(temp_waiting_time(WT)).
@@ -550,7 +613,7 @@
     assertz(temp_waiting_time(UpWT)).
  
  formIO(IO):-
-    temp_indexing_options(UpIO),
+    temp_indexing_options(_),
     nonvar(IO), 
     retractall(temp_indexing_options(_)),
     assertz(temp_indexing_options(IO)).
@@ -562,7 +625,7 @@
     assertz(temp_indexing_options(UpIO)).
  
  formDT(DT):-
-    temp_disability_tresholds(UpDT),
+    temp_disability_tresholds(_),
     nonvar(DT), 
     retractall(temp_disability_tresholds(_)),
     assertz(temp_disability_tresholds(DT)).
@@ -574,7 +637,7 @@
     assertz(temp_disability_tresholds(UpDT)).
  
  formDC(DC):-
-    temp_disability_criterion(UpDC),
+    temp_disability_criterion(_),
     nonvar(DC), 
     retractall(temp_disability_criterion(_)),
     assertz(temp_disability_criterion(DC)).
